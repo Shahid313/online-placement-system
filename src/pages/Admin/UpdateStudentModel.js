@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../css/style.css';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-  } from 'react-router-dom';
-  import { createBrowserHistory } from "history";
 
-const UpdateProfile = () => {
+const UpdateStudentModel = () => {
+    return(
 
-    return (
-        <div className="container-xxl py-5">
-            <div className="container d-flex align-items-center flex-column">
-                <h1 className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">UPDATE PROFILE</h1>
+<div class="modal fade" id="updateStudentModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
-                <div className="col-md-6">
-                        <div className="wow fadeInUp" data-wow-delay="0.5s">
-                            <form>
+      <form>
                                 <div className="row g-3">
                                     <div className="col-md-12">
                                         <div className="form-floating">
@@ -47,32 +44,8 @@ const UpdateProfile = () => {
                                             <label for="confirmpassword">Confirm password</label>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-12">
-                                    <select class="form-select">
-                                    <option selected disabled value="Role">Role</option>
-                                    <option value="employer">Employer</option>
-                                    <option value="student">Student</option>
-                                    </select>
-                                    </div>
-
+                                  
                                     
-                                    <div className="col-12">
-                                        <div className="form-floating">
-                                            <input type="text" className="form-control" id="domain" placeholder="Domain"/>
-                                            <label for="domain">Domain</label>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="form-floating">
-                                            <input type="text" className="form-control" id="address" placeholder="Address"/>
-                                            <label for="address">Address</label>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                        
                                     <div className="col-12">
                                         <div className="form-floating">
                                             <input type="text" className="form-control" id="education" placeholder="Education"/>
@@ -98,19 +71,20 @@ const UpdateProfile = () => {
                                     <label className="btn btn-success w-100 py-3" for="cv">Upload CV</label>
                                         <input type="file" style={{display:'none'}} className="form-control" id="cv"/>
                                     </div>
+                                  
                                     
                                     <div className="col-12">
-                                        <button className="btn btn-success w-100 py-3" type="submit">Update</button>
+                                        <button className="btn btn-success w-100 py-3" type="submit">Register</button>
                                     </div>
                                 </div>
                             </form>
-
+        
                         </div>
+                      </div>
                     </div>
+                  </div>
 
-            </div>
-        </div>
     )
 }
 
-export default UpdateProfile;
+export default UpdateStudentModel;

@@ -8,7 +8,7 @@ import {
     Route,
     Link,
   } from 'react-router-dom';
-import '../css/style.css';
+  import '../../css/style.css';
 
 const UpdateJob = () => {
     const KeyCodes = {
